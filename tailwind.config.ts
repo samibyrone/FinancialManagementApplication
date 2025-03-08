@@ -11,6 +11,7 @@ const config = {
     "./constants/**/*.{ts,tsx}",
   ],
   prefix: "",
+  important: true,
   theme: {
     container: {
       center: true,
@@ -86,7 +87,9 @@ const config = {
       },
       fontFamily: {
         inter: "var(--font-inter)",
-        "ibm-plex-serif": "var(--font-ibm-plex-serif)",
+        ibmPlexSerif: "var(--font-ibm-plex-serif)",
+        // plex: ['IBM Plex Serif', 'serif'],
+        // inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
