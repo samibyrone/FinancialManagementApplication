@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 
-const config = {
-// @ts-ignore
+const config: Config = {
+  important: true,
+// @ts-ignores
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -11,7 +12,6 @@ const config = {
     "./constants/**/*.{ts,tsx}",
   ],
   prefix: "",
-  important: true,
   theme: {
     container: {
       center: true,
@@ -108,6 +108,7 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+// satisfies Config;
 
 export default config;
