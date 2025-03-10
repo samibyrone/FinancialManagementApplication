@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+
 
 const config: Config = {
   important: true,
@@ -79,17 +81,13 @@ const config: Config = {
       },
       boxShadow: {
         form: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
-        chart:
-            "0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06)",
-        profile:
-            "0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)",
+        chart: "0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06)",
+        profile: "0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)",
         creditCard: "8px 10px 16px 0px rgba(0, 0, 0, 0.05)",
       },
       fontFamily: {
         inter: "var(--font-inter)",
         ibmPlexSerif: "var(--font-ibm-plex-serif)",
-        // plex: ['IBM Plex Serif', 'serif'],
-        // inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
@@ -106,8 +104,21 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-  },
-  plugins: [require("tailwindcss-animate")],
+  },plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar-hide"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none',
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    }),
+  ],
 };
 // satisfies Config;
 
