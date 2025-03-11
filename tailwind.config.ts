@@ -1,15 +1,14 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
-
 const config: Config = {
-  important: true,
-// @ts-ignores
+important: true,
+// @ts-ignore
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{ts,tsx}",
     "./constants/**/*.{ts,tsx}",
   ],
@@ -104,13 +103,15 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-  },plugins: [
+  },
+  plugins: [
     require("tailwindcss-animate"),
     require("tailwind-scrollbar-hide"),
+    require("tailwindcss-no-scrollbar"),
     plugin(function ({ addUtilities }) {
       addUtilities({
-        '.scrollbar-hide': {
-          '-ms-overflow-style': 'none',
+        ".scrollbar-hide": {
+          "-ms-overflow-style": "none",
           "scrollbar-width": "none",
           "&::-webkit-scrollbar": {
             display: "none",

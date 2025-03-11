@@ -1,9 +1,10 @@
+
 @import "tailwindcss";
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-@config "../../tailwind.config.js";
+@import "../tailwind.config.ts";
 
 
 * {
@@ -20,17 +21,29 @@ body {
   font-family: ibmPlexSerif, sans-serif;
 }
 
+
 @layer utilities {
   /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
+  .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
 
-  .no-scrollbar {
+  .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
 }
+/*@layer utilities {*/
+/*  !* Chrome, Safari and Opera *!*/
+/*  .no-scrollbar::-webkit-scrollbar {*/
+/*    display: none;*/
+/*  }*/
+
+/*  .no-scrollbar {*/
+/*    -ms-overflow-style: none; !* IE and Edge *!*/
+/*    scrollbar-width: none; !* Firefox *!*/
+/*  }*/
+/*}*/
 
 .glassmorphism {
   background: rgba(255, 255, 255, 0.25);
