@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
-const config: Config = {
-important: true,
+const config = {
+  important: true,
 // @ts-ignore
   darkMode: ["class"],
   content: [
@@ -120,7 +120,6 @@ important: true,
       });
     }),
   ],
-};
-// satisfies Config;
+} satisfies Config;
 
 export default config;
