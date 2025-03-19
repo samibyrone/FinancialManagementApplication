@@ -1,8 +1,11 @@
+"use client";
+
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import {sidebarLinks} from "@/constants";
 import {usePathname} from "next/navigation";
+import {cn} from "@/lib/utils";
 
 const Sidebar = ( {user} : SiderbarProps ) => {
     const pathname = usePathname();
@@ -17,8 +20,8 @@ const Sidebar = ( {user} : SiderbarProps ) => {
                 {sidebarLinks.map((item) => {
                     const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
 
-                    return (
-                        <Link href={item.route} key={item.label} className={cn ('sidebar-link')}>
+                     return (
+                        <Link href={item.route} key={item.label} className={cn ('sidebar-link', { 'bg-gradient' : isActive })}>
                             {item.label}
                         </Link>
                     )
