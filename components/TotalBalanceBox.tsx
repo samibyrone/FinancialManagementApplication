@@ -2,7 +2,7 @@ import React from 'react'
 import AnimatedCounter from "@/components/AnimatedCounter";
 import DoughnutChart from "@/components/DoughnutChart";
 
-const TotalBalanceBox = ({ accounts = [], totalBanks, totalCurrentBalance } : TotlaBalanceBoxProps) => {
+const TotalBalanceBox = ({ accounts = [], totalBanks, totalCurrentBalance } : TotalBalanceBoxProps) => {
     return (
         <section className="total-balance">
             <div className="total-balance-chart">

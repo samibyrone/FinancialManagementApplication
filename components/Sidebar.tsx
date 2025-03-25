@@ -7,7 +7,7 @@ import {sidebarLinks} from "@/constants";
 import {usePathname} from "next/navigation";
 import {cn} from "@/lib/utils";
 
-const Sidebar = ( {user} : SiderbarProps ) => {
+const Sidebar = ( {user} : SidebarProps ) => {
     const pathname = usePathname();
 
     return (

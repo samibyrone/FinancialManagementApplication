@@ -1,6 +1,5 @@
 /* eslint-disable no-prototype-builtins */
 import { type ClassValue, clsx } from "clsx";
-// @ts-ignore
 import qs from "query-string";
 import { twMerge } from "tailwind-merge";
 
@@ -136,10 +135,8 @@ export function countTransactionCategories(
   const categoryCounts: { [category: string]: number } = {};
   let totalCount = 0;
 
-  // Iterate over each transaction
   transactions &&
     transactions.forEach((transaction) => {
-      // Extract the category from the transaction
       const category = transaction.category;
 
       // If the category exists in the categoryCounts object, increment its count

@@ -144,7 +144,7 @@ declare interface CreditCardProps {
 
 declare interface BankInfoProps {
   account: Account;
-  appwriteItemId?: string;
+  appWriteItemId?: string;
   type: "full" | "card";
 }
 
@@ -199,10 +199,10 @@ declare interface BankDropdownProps {
 
 declare interface BankTabItemProps {
   account: Account;
-  appwriteItemId?: string;
+  appWriteItemId?: string;
 }
 
-declare interface TotlaBalanceBoxProps {
+declare interface TotalBalanceBoxProps {
   accounts: Account[];
   totalBanks: number;
   totalCurrentBalance: number;
@@ -218,14 +218,14 @@ declare interface RightSidebarProps {
   banks: Bank[] & Account[];
 }
 
-declare interface SiderbarProps {
+declare interface SidebarProps {
   user: User;
 }
 
 declare interface RecentTransactionsProps {
   accounts: Account[];
   transactions: Transaction[];
-  appwriteItemId: string;
+  appWriteItemId: string;
   page: number;
 }
 
@@ -260,7 +260,7 @@ declare interface getAccountsProps {
 }
 
 declare interface getAccountProps {
-  appwriteItemId: string;
+  appWriteItemId: string;
 }
 
 declare interface getInstitutionProps {
